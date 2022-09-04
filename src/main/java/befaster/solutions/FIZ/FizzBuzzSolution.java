@@ -4,7 +4,8 @@ public class FizzBuzzSolution {
 
     public String fizzBuzz(Integer number) {
 
-        if ((number % 5 == 0 && number.toString().contains("5")) && (number % 3 == 0 && number.toString().contains("3"))) {
+        if (((number % 5 == 0 && number.toString().contains("5")) || (number % 3 == 0 && number.toString().contains("3")))
+        &&(number % 5 == 0 || number.toString().contains("5")) && (number % 3 == 0 || number.toString().contains("3"))) {
             if (number % 2 != 0) {
                 return "fizz buzz fake deluxe";
             }
@@ -28,8 +29,6 @@ public class FizzBuzzSolution {
         } else {
             return number.toString();
         }
-
-
     }
 
     public boolean checkDigits(int nr) {
@@ -46,3 +45,4 @@ public class FizzBuzzSolution {
         return true;
     }
 }
+
