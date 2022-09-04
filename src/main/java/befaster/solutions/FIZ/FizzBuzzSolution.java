@@ -13,6 +13,10 @@ public class FizzBuzzSolution {
             return "buzz";
         } else if (number % 3 == 0 || number.toString().contains("3")) {
             return "fizz";
+        } else if ((number % 5 == 0 || number.toString().contains("5")) && (number > 10 && checkDigits(number))) {
+            return "buzz";
+        } else if ((number % 3 == 0 || number.toString().contains("3")) && (number > 10 && checkDigits(number))) {
+            return "fizz";
         } else if (number > 10 && checkDigits(number)) {
             return "deluxe";
         } else {
@@ -36,6 +40,7 @@ public class FizzBuzzSolution {
         return true;
     }
 }
+
 
 
 
