@@ -6,6 +6,9 @@ public class FizzBuzzSolution {
 
         if ((number % 5 == 0 || number.toString().contains("5")) && (number % 3 == 0 || number.toString().contains("3"))
                 && (number > 10 && checkDigits(number))) {
+            if (number % 2 != 0) {
+                return "fizz buzz fake deluxe";
+            }
             return "fizz buzz deluxe";
         } else if ((number % 5 == 0 || number.toString().contains("5")) && (number > 10 && checkDigits(number))) {
             if (number % 2 != 0) {
@@ -49,6 +52,7 @@ public class FizzBuzzSolution {
         return true;
     }
 }
+
 
 
 
