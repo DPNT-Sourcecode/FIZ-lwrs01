@@ -7,16 +7,16 @@ public class FizzBuzzSolution {
         if ((number % 5 == 0 || number.toString().contains("5")) && (number % 3 == 0 || number.toString().contains("3"))
                 && (number > 10 && checkDigits(number))) {
             return "fizz buzz deluxe";
+        } else if ((number % 5 == 0 || number.toString().contains("5")) && (number > 10 && checkDigits(number))) {
+            return "buzz deluxe";
+        } else if ((number % 3 == 0 || number.toString().contains("3")) && (number > 10 && checkDigits(number))) {
+            return "fizz deluxe";
         } else if ((number % 5 == 0 || number.toString().contains("5")) && (number % 3 == 0 || number.toString().contains("3"))) {
             return "fizz buzz";
         } else if (number % 5 == 0 || number.toString().contains("5")) {
             return "buzz";
         } else if (number % 3 == 0 || number.toString().contains("3")) {
             return "fizz";
-        } else if ((number % 5 == 0 || number.toString().contains("5")) && (number > 10 && checkDigits(number))) {
-            return "buzz deluxe";
-        } else if ((number % 3 == 0 || number.toString().contains("3")) && (number > 10 && checkDigits(number))) {
-            return "fizz deluxe";
         } else if (number > 10 && checkDigits(number)) {
             return "deluxe";
         } else {
@@ -40,3 +40,4 @@ public class FizzBuzzSolution {
         return true;
     }
 }
+
