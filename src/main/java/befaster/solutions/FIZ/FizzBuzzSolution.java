@@ -4,18 +4,17 @@ public class FizzBuzzSolution {
 
     public String fizzBuzz(Integer number) {
 
-        if ((number % 5 == 0 || number.toString().contains("5")) && (number % 3 == 0 || number.toString().contains("3"))
-                && (number > 10 && checkDigits(number))) {
+        if ((number % 5 == 0 && number.toString().contains("5")) || (number % 3 == 0 && number.toString().contains("3"))) {
             if (number % 2 != 0) {
                 return "fizz buzz fake deluxe";
             }
             return "fizz buzz deluxe";
-        } else if ((number % 5 == 0 || number.toString().contains("5")) && (number > 10 && checkDigits(number))) {
+        } else if ((number % 5 == 0 && number.toString().contains("5")) && (number > 10 && checkDigits(number))) {
             if (number % 2 != 0) {
                 return "buzz fake deluxe";
             }
             return "buzz deluxe";
-        } else if ((number % 3 == 0 || number.toString().contains("3")) && (number > 10 && checkDigits(number))) {
+        } else if ((number % 3 == 0 && number.toString().contains("3")) && (number > 10 && checkDigits(number))) {
             if (number % 2 != 0) {
                 return "fizz fake deluxe";
             }
@@ -26,11 +25,6 @@ public class FizzBuzzSolution {
             return "buzz";
         } else if (number % 3 == 0 || number.toString().contains("3")) {
             return "fizz";
-        } else if (number > 10 && checkDigits(number)) {
-            if (number % 2 != 0) {
-                return "fake deluxe";
-            }
-            return "deluxe";
         } else {
             return number.toString();
         }
@@ -52,6 +46,7 @@ public class FizzBuzzSolution {
         return true;
     }
 }
+
 
 
 
