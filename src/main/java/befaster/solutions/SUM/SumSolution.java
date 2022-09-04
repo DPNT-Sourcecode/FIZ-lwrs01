@@ -1,12 +1,17 @@
 package befaster.solutions.SUM;
 
-import befaster.runner.SolutionNotImplementedException;
-
 @SuppressWarnings("unused")
 public class SumSolution {
 
     public int compute(int x, int y) {
-        throw new SolutionNotImplementedException();
+
+        int sum = 0;
+
+        sum = x + y;
+
+        return sum;
+
     }
 
 }
+
